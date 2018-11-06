@@ -1,6 +1,8 @@
 class Supply < ApplicationRecord
+  include PgSearch
 
   belongs_to :user
 
-  scope :search, ->(supply_name) { where("name ILIKE ?", "%#{supply_name}%") }
+  pg_search_scope :search_supply, against: [:name]
+  
 end
