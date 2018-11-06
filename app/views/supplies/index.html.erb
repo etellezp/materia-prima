@@ -1,0 +1,41 @@
+<section id="supplies" class="padding-y-60 background-color-supplies">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-12 col-lg-6 d-flex justify-content-between align-items-center">
+        <h3>Productos en Oferta</h3>
+        <%= link_to "Agregar Producto", new_supply_path, class: "btn btn-primary btn-sm ml-3" %>
+      </div>
+      <div class="col-12 col-lg-6 align-items-center my-1">
+        <%= form_tag(supplies_path, method: :get) do %>
+          <div class="form d-flex align-items-center">
+            <%= text_field_tag :supply_name, params[:supply_name].to_s, placeholder: "Nombre del producto", class: "form-control form-control-sm" %>
+            <%= submit_tag "Buscar", name: nil, class: "btn btn-warning btn-sm ml-2" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <table class="table text-center table-striped table-hover border-bottom border-secondary">
+      <thead class="thead-bg text-white text-uppercase font-weight-light">
+        <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Ubicacion</th>
+        </tr>
+      </thead>
+      <% @supplies.each do |supply| %>
+        <tr>
+          <td><%= link_to supply.name, supply_path(supply) %></td>
+          <td><%= supply.quantity %> Kg</td>
+          <td>$<%= supply.price %></td>
+          <td><%= supply.location %></td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="flickr_pagination">
+      <%= will_paginate @supplies, previous_label: "Anterior", next_label: "Siguiente", class: "justify-content-center" %>
+    </div>
+  </div>
+
+</section>
