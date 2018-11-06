@@ -10,6 +10,214 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
  */
- @import "bootstrap";
+@import "bootstrap";
+
+/******* GLOBAL *******/
+* {
+ box-sizing: border-box;
+}
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.alert-messages {
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index:9999;
+  border-radius:0px
+}
+
+.btn-primary {
+  background-image: linear-gradient(to right, #4f72f6, #406ae7, #3162d7, #205bc8, #0953b9);
+}
+
+.btn-secondary {
+  background-image: linear-gradient(to right top, #5fb127, #57a01e, #4f9014, #47800a, #3e7001);
+}
+
+.btn-warning {
+  background-image: linear-gradient(to left bottom, #f05f40, #f47c4b, #f7955b, #faad6f, #fdc387);
+}
+
+.bg-warning {
+  background-image: linear-gradient(to left bottom, #f05f40, #f47c4b, #f7955b, #faad6f, #fdc387);
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.padding-y {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.padding-y-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/******* GLOBAL *******/
+
+/******* SECTION NAVBAR *******/
+.nav-link:hover {
+  border-bottom: 3px solid #F05F40;;
+}
+
+/******* END NAVBAR *******/
+
+/******* MAIN HEADING *******/
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: #F05F40;
+}
+
+header.homePage {
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("bgpic.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+header.homePage hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  header.homePage p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 992px) {
+  header.homePage {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/******* END MAIN HEADING *******/
+
+/******* SECTION ABOUTUS *******/
+
+.background-color {
+  background: #EEEEEE;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+/******* END ABOUTUS *******/
+
+/******* FOOTER *******/
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+/******* END FOOTER *******/
+
+/******* SECTION SUPPLIES *******/
+
+#supplies {
+  height: 100%;
+}
+
+thead.thead-bg {
+  background-image: linear-gradient(to right, #4f72f6, #406ae7, #3162d7, #205bc8, #0953b9);
+}
+
+.background-color-supplies {
+  background: #FBFCFC;
+}
+/******* END SUPPLIES *******/
+
+/******* SECTION DEMANDS *******/
+
+#demands {
+  height: 100%;
+}
+
+thead.thead-bg-demand {
+  background-image: linear-gradient(to right top, #5fb127, #57a01e, #4f9014, #47800a, #3e7001);
+}
+
+.background-color-demands {
+  background: #FBFCFC;
+}
+/******* END DEMANDS *******/
+
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0.2em 0.5em; }
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+  .flickr_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #ff0084; }
+  .flickr_pagination a {
+    border: 1px solid #dddddd;
+    color: #0063dc;
+    text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .flickr_pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+    margin-right: 1em; }
+  .flickr_pagination .next_page {
+    margin-left: 1em; }
+
+/******* REGISTRATION *******/
+#register-form {
+  background: #9CECFB;
+  background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+  background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+  height: 100%;
+}
+
+#login-form {
+  height: 100%;
+  background: #9CECFB;
+  background: -webkit-linear-gradient(to right top, #5fb127, #57a01e, #4f9014, #47800a, #3e7001);
+  background: linear-gradient(to right top, #5fb127, #57a01e, #4f9014, #47800a, #3e7001);
+
+}
+/******* END REGISTRATION *******/
+
+.supply-form {
+  background: #EEEEEE;
+  height: 100%;
+}
+
+.product-info {
+  height: 100%;
+}

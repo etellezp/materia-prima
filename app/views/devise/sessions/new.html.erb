@@ -1,26 +1,37 @@
-<h2>Log in</h2>
+<section id="login-form">
+  <div class="row d-flex justify-content-center align-items-center pt-4">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Iniciar Sesion</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name, class: "form-group")) do |f| %>
+            <div class="field">
+              <%= f.label :Email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+            <div class="field">
+              <%= f.label :contraseña %><br />
+              <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+            </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :recordar %>
+              </div>
+            <% end -%>
+
+            <div class="actions">
+              <%= f.submit "Iniciar Sesion", class: "btn btn-secondary w-100 mt-3" %>
+            </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+
+        </div>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>
