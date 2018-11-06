@@ -5,10 +5,11 @@ class SuppliesController < ApplicationController
   def index
     if params[:supply_name]
       @supplies = Supply.search_supply(params[:supply_name]).order("created_at DESC")
-    # else
+    else
     #   @supplies = Supply.all
+      @supplies = Supply.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
     end
-    @supplies = Supply.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
+
   end
 
   def show
