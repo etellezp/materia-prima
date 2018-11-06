@@ -8,7 +8,7 @@
       <div class="col-12 col-lg-6 align-items-center my-1">
         <%= form_tag(supplies_path, method: :get) do %>
           <div class="form d-flex align-items-center">
-            <%= text_field_tag :supply_name, params[:supply_name].to_s, placeholder: "Nombre del producto", class: "form-control form-control-sm" %>
+            <%= text_field_tag :supply_name, params[:supply_name], placeholder: "Nombre del producto", class: "form-control form-control-sm" %>
             <%= submit_tag "Buscar", name: nil, class: "btn btn-warning btn-sm ml-2" %>
           </div>
         <% end %>
