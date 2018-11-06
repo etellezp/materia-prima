@@ -34,9 +34,9 @@
       <% end %>
     </table>
     <div class="flickr_pagination">
-      <% unless @supplies.empty? %>
+      <%# unless @supplies.empty? %>
         <%= will_paginate @supplies, previous_label: "Anterior", next_label: "Siguiente", class: "justify-content-center" %>
-      <% end %>
+      <%# end %>
     </div>
   </div>
 
