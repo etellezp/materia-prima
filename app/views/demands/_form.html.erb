@@ -1,0 +1,15 @@
+<%= form_for @demand, class: "form-group" do |f| %>
+  <%= f.label :Nombre  %>
+  <%= f.text_field :name, required: true, class: "form-control" %> <br>
+
+  <%= f.label :Cantidad %>
+  <%= f.number_field :quantity, class: :text_field, step: :any, required: true, class: "form-control" %> <br>
+
+  <%= f.label :Ubicacion  %>
+  <%= f.text_field :location, required: true, class: "form-control" %> <br>
+
+  <%= f.submit "Agregar demanda", class: "btn btn-primary" %>
+
+<% end %>
+
+<%= link_to "Demandas", demands_path %>

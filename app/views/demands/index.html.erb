@@ -1,0 +1,38 @@
+<section id="demands" class="padding-y-60">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-12 col-lg-6 d-flex justify-content-between align-items-center">
+        <h3>Productos en Demanda</h3>
+        <%= link_to "Agregar Producto", new_demand_path, class: "btn btn-secondary btn-sm ml-3" %>
+      </div>
+      <div class="col-12 col-lg-6 align-items-center my-1">
+        <%= form_tag(demands_path, method: :get) do %>
+          <div class="form d-flex align-items-center">
+            <%= text_field_tag :demand_name, params[:demand_name].to_s, placeholder: "Nombre del producto", class: "form-control form-control-sm" %>
+            <%= submit_tag "Buscar", name: nil, class: "btn btn-warning btn-sm ml-2" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <table class="table text-center table-striped table-hover border-bottom border-secondary">
+      <thead class="thead-bg-demand text-white text-uppercase font-weigth-light">
+        <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Ubicacion</th>
+        </tr>
+      </thead>
+      <% @demands.each do |demand| %>
+        <tr>
+          <td><%= link_to demand.name, demand_path(demand) %></td>
+          <td><%= demand.quantity %> Kg</td>
+          <td><%= demand.location %></td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="flickr_pagination">
+      <%= will_paginate @demands, previous_label: "Anterior", next_label: "Siguiente", class: "justify-content-center" %>
+    </div>
+  </div>
+
+</section>
