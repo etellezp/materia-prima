@@ -1,0 +1,32 @@
+<header class="homePage text-center text-white d-flex">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="display-3">Materia Prima</h1>
+        <hr>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <%= link_to "Ver Ofertas", supplies_path, class: "btn btn-primary btn-lg mr-2" %>
+        <%= link_to "Ver Demandas", demands_path, class: "btn btn-secondary btn-lg ml-2" %>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="aboutUs background-color padding-y">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <h1 class="display-5 mb-3">Materia Prima</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <%= link_to "Registrate", new_user_registration_path, class: "btn btn-warning btn-lg mt-2" %>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <%= image_tag("rm1.jpg", alt: "materia prima", class: "img-fluid rounded-circle mt-3") %>
+      </div>
+    </div>
+  </div>
+</section>
