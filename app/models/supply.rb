@@ -3,6 +3,6 @@ class Supply < ApplicationRecord
 
   belongs_to :user
 
-  pg_search_scope :search_supply, against: [:name]
-  
+  pg_search_scope :search_supply, :against => :name 
+
 end
